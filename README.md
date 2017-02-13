@@ -1,0 +1,2 @@
+# Web-Application-for-Classified-Advertisements
+Designed a responsive and scalable web application using HTML, CSS, Angular JS where RESTful Web Services with ORM Framework Hibernate and Spring were used for relational database. Service Oriented Architecture enabled users to post and bid for items, search for items on auction with filterable properties wherein the request and response data were cached using Memcached, encrypted using TSL and compressed using gzip

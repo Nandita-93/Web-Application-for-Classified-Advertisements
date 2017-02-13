@@ -1,0 +1,17 @@
+<div>
+	<table ng-table="itemsTable" show-filter="true" class="table table-striped">
+	  <tr ng-repeat="item in $data">
+		<td title="'Item Id'" sortable="'itemId'" filter="{ 'itemId': 'text' }">{{ item.itemId }}</td>
+		<td title="'Item Name'" sortable="'itemName'" filter="{ 'itemName': 'text' }">{{ item.itemName }}</td>
+		<td title="'Post User Id'" sortable="'postUserID'" filter="{ 'postUserID': 'text' }">{{ item.postUserID}}</td>
+		<td title="'Category'" sortable="'category'" filter="{ 'category': 'text' }">{{ item.category }}</td>
+		<td title="'Location'" sortable="'location'" filter="{ 'location': 'text' }">{{ item.location }}</td>
+		<td title="'Date Posted'" sortable="'datePosted'" filter="{ 'datePosted': 'text' }">{{ item.datePosted }}</td>
+		<td title="'Base Price'" sortable="'basePrice'" filter="{ 'basePrice': 'text' }">{{ item.basePrice }}</td>
+		<td title="'Item Status'" sortable="'status'" filter="{ 'status': 'text' }">{{ item.status }}</td>
+		<td title="''"><button type="button" class="btn btn-default btn-sm" ng-click="openModal(item.itemId)">
+		 Bid</button></td>
+	  </tr>
+	</table>
+
+</div>

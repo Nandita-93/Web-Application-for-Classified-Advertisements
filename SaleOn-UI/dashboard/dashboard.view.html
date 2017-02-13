@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row grid-divider">
+    <div class="col-sm-8">
+      <div class="col-padding">
+		<div>
+		<table ng-table="bidsTable" show-filter="true" class="table table-striped">
+		   <tr ng-repeat="bid in $data">
+			   <td title="'Item Id'" sortable="'itemId'" filter="{ 'itemId': 'text' }">
+					{{bid.itemId}}
+			   </td>
+			   <td title="'Bid User'" sortable="'bidUserId'" filter="{ 'bidUserId': 'text' }">
+				   {{bid.bidUserId}}
+			   </td>    
+			   <td title="'Bid Price'" sortable="'basePrice'" filter="{ 'basePrice': 'text' }">
+				   {{bid.basePrice}}
+			   </td>    
+			   <td title="'Date'" sortable="'datePosted'" filter="{ 'datePosted': 'text' }">
+				   {{bid.datePosted}}
+			   </td>    
+			   <td>
+				  <button type="button" class="btn btn-default btn-sm" ng-click="vm.addToCart(bid.itemId,bid.bidUserId,bid.basePrice)">
+				  <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart
+			   </td>
+			</tr>
+		</table>
+		</div>
+      </div>
+	</div> 
+	<div class="col-sm-4">
+      <div class="col-padding">
+        <div class="center"><button data-toggle="modal" ng-click="vm.openModal()" class="btn btn-primary"><b>Post</b></button></div>
+      </div>
+    </div>
+    </div>
+</div>    
